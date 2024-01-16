@@ -32,7 +32,7 @@ const PlaceItem = (props) => {
     setShowConfirmModal(false);
     try {
       await sendRequest(
-        `http://localhost:5000/api/places/${props.id}`,
+        `https://geo-location-gallery-backend.onrender.com/api/places/${props.id}`,
         "DELETE",
         null,
         {
@@ -84,7 +84,7 @@ const PlaceItem = (props) => {
           {isLoading && <LoadingSpinner asOverlay />}
           <div className="place-item__image">
             <img
-              src={`http://localhost:5000/${props.image}`}
+              src={`https://geo-location-gallery-backend.onrender.com/${props.image}`}
               alt={props.title}
             />
           </div>
